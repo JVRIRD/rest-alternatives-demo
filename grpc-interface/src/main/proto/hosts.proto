@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+option java_package = "world.inetum.realdolmen.grpc";
+option java_outer_classname = "HostProto";
+
+service HostService {
+    rpc getHosts (google.protobuf.Empty) returns (HostsReply) {
+    }
+
+    rpc getHost (HostRequest) returns (Host) {
+    }
+}
+message HostsReply {
+    repeated Host hosts = 1;
+}
+
+message Host {
+    int32 id = 1;
+    string firstName = 2;
+    string lastName = 3;
+    string function = 4;
+}
+
+message HostRequest {
+    int32 id = 1;
+}

@@ -1,0 +1,27 @@
+type Query {
+    sessions: [Session],
+    session(id: ID!): Session
+}
+
+type Mutation {
+  addSession(input: SessionInput): Session
+}
+
+type Session {
+    id: ID!,
+    title: String!,
+    description: String,
+    hosts: [Host]
+}
+
+type Host {
+    id: ID!,
+    firstName: String,
+    lastName: String,
+    function: String
+}
+
+input SessionInput {
+    title: String,
+    description: String,
+}

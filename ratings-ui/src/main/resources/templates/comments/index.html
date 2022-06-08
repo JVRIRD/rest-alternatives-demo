@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../static/css/testimonial.css" data-th-href="@{/css/testimonial.css}" rel="stylesheet">
+    <link href="../../static/css/main.css" data-th-href="@{/css/main.scss}" rel="stylesheet">
+</head>
+<body>
+<!--<blockquote class="l-quote quote">-->
+<!--    <p>When will Apple release a MacBook Air 15" with Retina?</p>-->
+<!--    <cite>John Doe - Developer</cite>-->
+<!--</blockquote>-->
+<testimonial-container>
+    <table id="comments" class="table table-striped">
+        <tbody>
+        <tr class="result" data-th-each="comment : ${comments}">
+            <td>
+                <testimonial-block>
+                    <q><p>[[${comment.message}]]</p></q>
+                    <footer>[[${comment.user}]]</footer>
+                </testimonial-block>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</testimonial-container>
+
+</body>

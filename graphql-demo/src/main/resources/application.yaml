@@ -1,0 +1,11 @@
+spring:
+  graphql:
+    graphiql:
+      enabled: true
+server:
+  port: 8081
+grpc:
+  client:
+    hostService:
+      address: static://localhost:9090
+      negotiationType: PLAINTEXT
