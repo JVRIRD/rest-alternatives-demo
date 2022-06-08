@@ -28,5 +28,8 @@ mvnw.cmd clean install
 
 Linux instructions
 ```
+# Add execute privileges if necessary
+chmod +x mvnw
+# build using mvnw
 ./mvnw clean install
 ```
